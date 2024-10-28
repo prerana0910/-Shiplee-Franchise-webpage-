@@ -1,0 +1,316 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #b2d2f3;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #222;
+    color: #ddd;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Dark Mode Toggle Button */
+/* Dark Mode Toggle Button */
+#darkModeToggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#darkModeToggle .icon-sun {
+    color: #FFA500; /* Sun icon color */
+}
+
+#darkModeToggle .icon-moon {
+    color: #B0C4DE; /* Moon icon color */
+}
+
+/* Scroll-to-Top Button */
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 50%;
+    background-color: #FFD700;
+    border: none;
+    cursor: pointer;
+    display: none;
+    transition: transform 0.3s;
+}
+
+#scrollToTop:hover {
+    transform: scale(1.1);
+}
+
+/* Header */
+header {
+    background: #003366;
+    color: white;
+    padding: 10px 0;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+header .nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header .nav-links a:hover {
+    color: #FFD700;
+}
+
+/* Hero Section */
+.hero {
+    background: url('photo/5.jpeg') center/cover no-repeat;
+    color: rgb(79, 105, 200);
+    text-align: center;
+    padding: 80px 20px;
+    animation: fadeIn 1s ease-in;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero .cta {
+    background-color:#0761bb;
+    color: whitesmoke;
+    margin-top: 20px; /* Adjusts space between the button and text */
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.hero .cta:hover {
+    background-color: #333;
+    color: #FFD700;
+}
+
+/* Image Slider */
+/* .image-slider {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 50%;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.image-slider img {
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+} */
+
+/* Navigation Arrows */
+/* .image-slider .prev,
+.image-slider .next {
+    position: absolute;
+    top: 50%;
+    font-size: 24px;
+    color: #003366;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    transform: translateY(-50%);
+}
+
+.image-slider .prev {
+    left: 10px;
+}
+
+.image-slider .next {
+    right: 10px;
+}
+
+.image-slider .prev:hover,
+.image-slider .next:hover {
+    background-color: rgba(255, 215, 0, 0.8);
+} */
+
+
+/* Accordion Styles */
+.accordion-content {
+    display: none; /* Initially hidden */
+    margin-top: 10px;
+    padding-left: 20px;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+}
+
+.accordion-content.open {
+    display: block;
+}
+
+.accordion-toggle {
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.accordion-toggle:hover {
+    background-color:  #00796B;
+}
+
+
+/* Benefits Table */
+.benefits table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    text-align: left;
+    animation: slideUp 1s ease-in;
+}
+
+.benefits th, .benefits td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.benefits th {
+    background-color: #003366;
+    color: white;
+}
+
+/* Network Reach Section */
+.network {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #003366;
+    animation: fadeIn 1s ease-in;
+    color: #fff;
+}
+
+/* Partners Grid */
+/* Partners Section */
+.partners {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.partners h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #003366;
+}
+
+.partners-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.partner-logo {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(100%);
+}
+
+.partner-logo:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+/* Additional Global Styles */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"].is-visible {
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
